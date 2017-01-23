@@ -1,6 +1,6 @@
 {
     "name": "stesie/echomud",
-    "license": "proprietary",
+    "license": "MIT",
     "type": "project",
     "autoload": {
         "psr-4": {
@@ -16,6 +16,12 @@
             "Tests\\": "tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/stesie/mudlib"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "symfony/symfony": "3.2.*",
@@ -27,7 +33,8 @@
         "symfony/polyfill-apcu": "^1.0",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
-        "incenteev/composer-parameter-handler": "^2.0"
+        "incenteev/composer-parameter-handler": "^2.0",
+        "stesie/mudlib": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
