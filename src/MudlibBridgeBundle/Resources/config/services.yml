@@ -1,4 +1,4 @@
 services:
-#    mudlib_bridge.example:
-#        class: MudlibBridgeBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    mudlib_bridge.event_store:
+        class: MudlibBridgeBundle\Service\EventStore
+        arguments: [ "@doctrine.orm.entity_manager" ]
