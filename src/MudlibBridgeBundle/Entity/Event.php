@@ -24,9 +24,9 @@ class Event
     /**
      * @var string
      *
-     * @ORM\Column(name="aggregate_root_id", type="string", length=50)
+     * @ORM\Column(name="aggregate_id", type="string", length=50)
      */
-    private $aggregateRootId;
+    private $aggregateId;
 
     /**
      * @var string
@@ -53,27 +53,27 @@ class Event
     }
 
     /**
-     * Set aggregateRootId
+     * Set aggregateId
      *
-     * @param string $aggregateRootId
+     * @param string $aggregateId
      *
      * @return Event
      */
-    public function setAggregateRootId($aggregateRootId)
+    public function setAggregateId($aggregateId)
     {
-        $this->aggregateRootId = $aggregateRootId;
+        $this->aggregateId = $aggregateId;
 
         return $this;
     }
 
     /**
-     * Get aggregateRootId
+     * Get aggregateId
      *
      * @return string
      */
-    public function getAggregateRootId()
+    public function getAggregateId()
     {
-        return $this->aggregateRootId;
+        return $this->aggregateId;
     }
 
     /**

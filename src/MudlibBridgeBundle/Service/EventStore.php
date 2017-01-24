@@ -29,7 +29,7 @@ class EventStore implements \stesie\mudlib\EventStore
 
             $event = new Event();
             $event
-                ->setAggregateRootId($domainEvent->getAggregateId())
+                ->setAggregateId($domainEvent->getAggregateId())
                 ->setName($eventName)
                 ->setExtraData(serialize($domainEvent))
             ;
