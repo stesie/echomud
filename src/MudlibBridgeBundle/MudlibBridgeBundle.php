@@ -9,6 +9,6 @@ class MudlibBridgeBundle extends Bundle
 {
     public function boot()
     {
-        (new Kernel($this->container->get('mudlib_bridge.event_bus')))->boot();
+        $this->container->get('mudlib_bridge.kernel')->boot();
     }
 }

@@ -5,3 +5,7 @@ services:
 
     mudlib_bridge.event_bus:
         class: stesie\mudlib\EventBus
+
+    mudlib_bridge.kernel:
+        class: stesie\mudlib\Kernel
+        arguments: [ "@mudlib_bridge.event_bus", "@sb_redis.client.default" ]
