@@ -5,6 +5,7 @@ namespace MudlibBridgeBundle\Service;
 use Doctrine\ORM\EntityManager;
 use MudlibBridgeBundle\Entity\Event;
 use stesie\mudlib\Event\DomainEventInterface;
+use stesie\mudlib\EventBusInterface;
 
 class EventStore implements \stesie\mudlib\EventStoreInterface
 {
@@ -13,9 +14,15 @@ class EventStore implements \stesie\mudlib\EventStoreInterface
      */
     private $entityManager;
 
-    public function __construct(EntityManager $entityManager)
+    /**
+     * @var EventBusInterface
+     */
+    private $eventBus;
+
+    public function __construct(EntityManager $entityManager, EventBusInterface $eventBus)
     {
         $this->entityManager = $entityManager;
+        $this->eventBus = $eventBus;
     }
 
     /**
@@ -35,6 +42,7 @@ class EventStore implements \stesie\mudlib\EventStoreInterface
             ;
 
             $this->entityManager->persist($event);
+            $this->eventBus->publish($domainEvent);
         }
     }
 }

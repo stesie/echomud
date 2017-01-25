@@ -1,4 +1,7 @@
 services:
     mudlib_bridge.event_store:
         class: MudlibBridgeBundle\Service\EventStore
-        arguments: [ "@doctrine.orm.entity_manager" ]
+        arguments: [ "@doctrine.orm.entity_manager", "@mudlib_bridge.event_bus" ]
+
+    mudlib_bridge.event_bus:
+        class: stesie\mudlib\EventBus
