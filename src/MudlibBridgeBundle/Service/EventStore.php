@@ -4,9 +4,9 @@ namespace MudlibBridgeBundle\Service;
 
 use Doctrine\ORM\EntityManager;
 use MudlibBridgeBundle\Entity\Event;
-use stesie\mudlib\Event\DomainEvent;
+use stesie\mudlib\Event\DomainEventInterface;
 
-class EventStore implements \stesie\mudlib\EventStore
+class EventStore implements \stesie\mudlib\EventStoreInterface
 {
     /**
      * @var EntityManager
@@ -19,7 +19,7 @@ class EventStore implements \stesie\mudlib\EventStore
     }
 
     /**
-     * @param DomainEvent[] $domainEvents
+     * @param DomainEventInterface[] $domainEvents
      */
     public function storeEvents(array $domainEvents)
     {
