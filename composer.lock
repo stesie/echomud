@@ -1315,12 +1315,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/stesie/mudlib.git",
-                "reference": "8d4c5da3476896aed2044d6a6d798b73bdad3d32"
+                "reference": "27529af45de3e699f0bf1b1640d35799170dd12f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stesie/mudlib/zipball/8d4c5da3476896aed2044d6a6d798b73bdad3d32",
-                "reference": "8d4c5da3476896aed2044d6a6d798b73bdad3d32",
+                "url": "https://api.github.com/repos/stesie/mudlib/zipball/27529af45de3e699f0bf1b1640d35799170dd12f",
+                "reference": "27529af45de3e699f0bf1b1640d35799170dd12f",
                 "shasum": ""
             },
             "type": "library",
@@ -1343,7 +1343,7 @@
                 "source": "https://github.com/stesie/mudlib/tree/master",
                 "issues": "https://github.com/stesie/mudlib/issues"
             },
-            "time": "2017-01-24 07:53:05"
+            "time": "2017-01-28 20:18:38"
         },
         {
             "name": "swiftmailer/swiftmailer",
